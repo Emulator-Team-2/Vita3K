@@ -33,6 +33,7 @@ constexpr socket_t BAD_SOCK = -1;
 
 constexpr uint32_t GDB_SERVER_PORT = 2159;
 
+
 struct GDBState {
 #ifdef _WIN32
     WSADATA wsaData;
@@ -47,8 +48,6 @@ struct GDBState {
     std::string last_reply = "";
 
     SceUID current_thread = 0;
-
-    std::map<Address, uint32_t> breakpoints;
 };
 
 #endif

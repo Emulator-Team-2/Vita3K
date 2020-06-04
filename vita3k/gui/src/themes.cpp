@@ -621,7 +621,7 @@ void draw_themes_selection(GuiState &gui, HostState &host) {
                 ImGui::TextColored(GUI_COLOR_TEXT, "Version");
                 ImGui::SameLine();
                 ImGui::SetCursorPosX(INFO_POS.x);
-                ImGui::TextColored(GUI_COLOR_TEXT, "%s", themes_info[selected].version);
+                ImGui::TextColored(GUI_COLOR_TEXT, "%s", themes_info[selected].version.c_str());
             }
         }
     } else if (menu == "start") {
